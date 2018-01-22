@@ -46,6 +46,6 @@ E:\BrainDigit\RGN\RGN\bin\Microsoft.Owin.Security.Google.xml
 E:\BrainDigit\RGN\RGN\bin\Microsoft.Owin.Security.Twitter.xml
 E:\BrainDigit\RGN\RGN\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\BrainDigit\RGN\RGN\bin\Microsoft.Owin.Security.OAuth.xml
-E:\BrainDigit\RGN\RGN\obj\Debug\RGN.csprojResolveAssemblyReference.cache
 E:\BrainDigit\RGN\RGN\obj\Debug\RGN.dll
 E:\BrainDigit\RGN\RGN\obj\Debug\RGN.pdb
+E:\BrainDigit\RGN\RGN\obj\Debug\RGN.csprojResolveAssemblyReference.cache

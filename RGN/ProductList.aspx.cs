@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using RGN.Models;
+using RGN.Logic;
 using System.Web.ModelBinding;
 
 
@@ -25,6 +26,12 @@ namespace RGN
             {
                 query = query.Where(p => p.CategoryID == categoryId);
             }
+            return query;
+        }
+        public IQueryable<Category> GetCategories()
+        {
+            var _db = new RGN.Models.ProductContext();
+            IQueryable<Category> query = _db.Categories;
             return query;
         }
 

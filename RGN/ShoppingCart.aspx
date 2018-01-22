@@ -1,11 +1,14 @@
 ﻿<%@ Page Title="Your Cart" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ShoppingCart.aspx.cs" Inherits="RGN.ShoppingCart" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="ShoppingCartTitle" runat="server" class="ContentHead">
-        <h1>Shopping Cart</h1> 
-        <asp:Button ID="UpdateBtn" runat="server" Text="Update Cart" OnClick="UpdateBtn_Click" class="btn btn-primary btn-sm" style="float:right;margin-bottom:20px;"/>
-        <br />
+    <br />
+    <br />
+    <br />
+    
+    <div id="ShoppingCartTitle" runat="server" class="ContentHead text-center">
+        <h1 class="text-left">Shopping Cart</h1> 
     </div>
-          
+        <asp:Button ID="UpdateBtn" runat="server" Text="Update Cart" OnClick="UpdateBtn_Click" class="btn btn-primary btn-sm" style="float:right;margin-bottom:20px;"/>
+        <br />  
     <asp:GridView ID="CartList" runat="server" AutoGenerateColumns="False" ShowFooter="True" GridLines="Vertical" CellPadding="4"
         ItemType="RGN.Models.CartItem" SelectMethod="GetShoppingCartItems" 
         CssClass="table table-striped table-bordered" >   
@@ -31,11 +34,12 @@
         </Columns>    
     </asp:GridView>
     <div>
+        <br />
         <p></p>
-        <strong>
+        <h3>
             <asp:Label ID="LabelTotalText" runat="server" Text="Order Total: "></asp:Label>
             <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
-        </strong> 
+        </h3> 
     </div>
     <br />
     <table> 

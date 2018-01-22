@@ -1,11 +1,26 @@
 ﻿<%@ Page Title="Products" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductList.aspx.cs" Inherits="RGN.ProductList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section>
+        
+            <br />
+            
+            <h2 class="text-center" id="title"><%: Page.Title %></h2>
+            <br />
         <div>
+            <div id="CategoryNav" class="categoryNav">
+                <div id="CategoryMenu" class="text-center">   
+                    <div class="btn-group">
+                        <asp:ListView ID="ListView1"  ItemType="RGN.Models.Category" runat="server" SelectMethod="GetCategories" >
+                            <ItemTemplate>
+                                 <a href="/ProductList.aspx?id=<%#: Item.CategoryID %>" class="btn btn-success">
+                                     <%#: Item.CategoryName %>
+                                 </a>
+                            </ItemTemplate>
+                        </asp:ListView>
+                    </div>
+                </div>
+           </div>
             <br />
-            <br />
-           
-
             <asp:ListView ID="productList" runat="server" DataKeyNames="ProductID" GroupItemCount="5" ItemType="RGN.Models.Product" SelectMethod="GetProducts">
                 <EmptyDataTemplate>
                     <table >
@@ -23,7 +38,7 @@
                     </tr>
                 </GroupTemplate>
                 <ItemTemplate>
-                    <div class="col-xs-12 col-sm-4 col-md-3 text-center" runat="server">
+                    <div class="col-xs-12 col-sm-4 col-md-3 text-center product-box" runat="server">
                         <br />
                         <br />
                         <a href="ProductDetails.aspx?productID=<%#:Item.ProductID%>">
@@ -41,7 +56,8 @@
                             <b>Price: </b><%#:String.Format("{0:c}", Item.UnitPrice)%>
                         </span>
                         <br />
-                        <a href="/AddToCart.aspx?productID=<%#:Item.ProductID %>" class="btn btn-sm btn-primary" style="width:60%;">               
+                        <br />
+                        <a href="/AddToCart.aspx?productID=<%#:Item.ProductID %>" class="btn btn-sm btn-primary" style="width:70%;">               
                             <span class="ProductListItem">
                                 <b>Add To Cart<b>
                             </span>           
@@ -49,7 +65,7 @@
                         
                         <br />
                         <br />
-                        <br />
+                       
                     </div>
                 </ItemTemplate>
                 <LayoutTemplate>

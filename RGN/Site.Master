@@ -13,6 +13,7 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/main.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -54,7 +55,7 @@
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href="~/ProductList">Products</a></li>
-                        <li><a runat="server" href="~/ShoppingCart" ID="cartCount">&nbsp;</a></li>
+                        
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -73,38 +74,27 @@
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </div>
+                
             </div>
             
         </div>
-        <br />
-        <br />
-        <div id="TitleContent" >
-            <div id="CategoryMenu" class="text-center">   
-                <div class="btn-group">
-                    <asp:ListView ID="ListView1"  ItemType="RGN.Models.Category" runat="server" SelectMethod="GetCategories" >
-                        <ItemTemplate>
-                             <a href="/ProductList.aspx?id=<%#: Item.CategoryID %>" class="btn btn-default">
-                                 <%#: Item.CategoryName %>
-                             </a>
-                        </ItemTemplate>
-                    </asp:ListView>
-                </div>
-            </div>
-       </div>
+        <a runat="server" href="~/ShoppingCart" ID="cartCount" class="btn btn-info btnCart">&nbsp;</a>
+        
         
 
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
 
-            <br />
-            <br />
-            <hr />
-            
-            <footer>
+            </asp:ContentPlaceHolder>
+      </div>
+      <br />
+      <br />  
+      <div class="container">
+        <hr />
+        <footer>
             <p>&copy; <%: DateTime.Now.Year %> - Rider Gears Nepal</p>
-            </footer>
-            </div>
+        </footer>
+      </div>
     </form>
 </body>
 </html>
