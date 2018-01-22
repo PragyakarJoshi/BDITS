@@ -15,9 +15,22 @@
                     <td style="vertical-align: top; text-align:left;">
                         <b>Description:</b><br /><%#:Item.Description %>
                         <br />
+                        <br />
                         <span><b>Price:</b>&nbsp;<%#: String.Format("{0:c}", Item.UnitPrice) %></span>
                         <br />
+                        <br />
                         <span><b>Product Number:</b>&nbsp;<%#:Item.ProductID %></span>
+                        <br />
+                        <br />
+                        <br /><br /><br />
+                        <br />
+                        <br />
+                        <br />
+                        <a href="/AddToCart.aspx?productID=<%#:Item.ProductID %>" class="btn btn-primary" style="width:40%;">               
+                            <span class="ProductListItem">
+                                <b>Add To Cart<b>
+                            </span>           
+                        </a>
                         <br />
                     </td>
                 </tr>
