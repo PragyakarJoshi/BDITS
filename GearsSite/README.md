@@ -1,3 +1,5 @@
 # RGN
 
-Basic ASP.NET web application
+Basic Ecommerce web application in ASP.NET Webforms
+
+
