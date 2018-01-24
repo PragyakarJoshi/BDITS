@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Data.Entity;
 using RGN.Models;
+using RGN.Logic;
 
 namespace RGN
 {
@@ -20,6 +21,9 @@ namespace RGN
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Database.SetInitializer(new ProductDatabaseInitializer());
+
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
     }
 }

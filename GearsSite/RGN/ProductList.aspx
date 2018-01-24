@@ -1,11 +1,12 @@
 ﻿<%@ Page Title="Products" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductList.aspx.cs" Inherits="RGN.ProductList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container">
     <section>
         
-            <br />
+       <br />
             
-            <h2 class="text-center" id="title"><%: Page.Title %></h2>
-            <br />
+       <h2 class="text-center" id="title"><%: Page.Title %></h2>
+       <br />
         <div>
             <div id="CategoryNav" class="categoryNav">
                 <div id="CategoryMenu" class="text-center">   
@@ -23,19 +24,15 @@
             <br />
             <asp:ListView ID="productList" runat="server" DataKeyNames="ProductID" GroupItemCount="5" ItemType="RGN.Models.Product" SelectMethod="GetProducts">
                 <EmptyDataTemplate>
-                    <table >
-                        <tr>
-                            <td>No data was returned.</td>
-                        </tr>
-                    </table>
+                    <h2 class="text-center">Error 404: Page does not exist</h2>
                 </EmptyDataTemplate>
                 <EmptyItemTemplate>
-                    <td/>
+                    
                 </EmptyItemTemplate>
                 <GroupTemplate>
-                    <tr id="itemPlaceholderContainer" runat="server">
-                        <td id="itemPlaceholder" runat="server"></td>
-                    </tr>
+                        <tr id="itemPlaceholderContainer" runat="server">
+                            <td id="itemPlaceholder" runat="server"></td>
+                        </tr>
                 </GroupTemplate>
                 <ItemTemplate>
                     <div class="col-xs-12 col-sm-4 col-md-3 text-center product-box" runat="server">
@@ -59,7 +56,7 @@
                         <br />
                         <a href="/AddToCart.aspx?productID=<%#:Item.ProductID %>" class="btn btn-sm btn-primary" style="width:70%;">               
                             <span class="ProductListItem">
-                                <b>Add To Cart<b>
+                                <b>Add To Cart &nbsp;<b>
                             </span>           
                         </a>
                         
@@ -88,4 +85,5 @@
             </asp:ListView>
         </div>
     </section>
+    </div>
 </asp:Content>

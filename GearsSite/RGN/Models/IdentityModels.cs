@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Owin.Security;
+﻿using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
 using System.Web;
-using System;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
 using RGN.Models;
+
 
 namespace RGN.Models
 {
