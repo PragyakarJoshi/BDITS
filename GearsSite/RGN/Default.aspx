@@ -16,62 +16,59 @@
     <br />  
    <div class="container" id="start">
        <div class="row">
-           <div class="col-md-4">
+           <div class="col-md-3">
                <div class="categoryBox">
                    <h2 class="text-center">Helmets</h2>
-                   <br />
-                   <p class="text-center " style="text-align:justify;">
-                        Lorem ipsum dolor, consectetur adipisicing elitdo eiusmod
-                        tempor incididunt ut labore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                        deserunt mollit anim id est laborum.
-                   </p>
-                   <br />
-                    <p class="text-center" >
-                        <a class="btn btn-primary " href="/ProductList.aspx?id=1">Browse &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
-                    </p>
-                </div>
-           </div>
-           
-           <div class="col-md-4">
-               <div class="categoryBox">
                    
-                   <h2 class="text-center">Gloves</h2>
-                   <br />
-                    <p class="text-center" style="text-align:justify;">
+                    <p class="text-center">
                         Lorem ipsum dolor, consectetur adipisicing elitdo eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
                     </p>
                    <br />
                     <p class="text-center">
-                        <a class="btn btn-primary " href="/ProductList.aspx?id=2">Browse &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="btn btn-primary btn-sm" href="/ProductList.aspx?id=1">Browse Helmets &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
                     </p>
                </div>
            </div>
-           <div class="col-md-4">
+           <div class="col-md-3">
                <div class="categoryBox">
-                   <h2 class="text-center">Apparels</h2>
-                   <br />
-                    <p class="text-center" style="text-align:justify;">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elitdo eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                   <h2 class="text-center">Gloves</h2>
+                    <p class="text-center">
+                        Lorem ipsum dolor, consectetur adipisicing elitdo eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     </p>
                    <br />
                     <p class="text-center">
-                        <a class="btn btn-primary " href="/ProductList.aspx?id=3">Browse &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
-                    </p> 
-                </div>
+                        <a class="btn btn-primary btn-sm" href="/ProductList.aspx?id=2">Browse Gloves &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </p>
+               </div>
+           </div>
+           
+           <div class="col-md-3">
+               <div class="categoryBox">
+                   <h2 class="text-center">Apparels</h2>
+                    <p class="text-center">
+                        Lorem ipsum dolor, consectetur adipisicing elitdo eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                    </p>
+                   <br />
+                    <p class="text-center">
+                        <a class="btn btn-primary btn-sm" href="/ProductList.aspx?id=3">Browse Apparels &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </p>
+               </div>
+           </div>
+           <div class="col-md-3">
+               <div class="categoryBox">
+                   <h2 class="text-center">Shoes</h2>
+                    <p class="text-center">
+                        Lorem ipsum dolor, consectetur adipisicing elitdo eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+                    </p>
+                   <br />
+                    <p class="text-center">
+                        <a class="btn btn-primary btn-sm" href="/ProductList.aspx?id=4">Browse Shoes &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </p>
+               </div>
            </div>
        </div>
     </div>

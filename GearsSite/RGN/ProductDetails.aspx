@@ -20,6 +20,8 @@
 		            <img src="/Catalog/Images/<%#:Item.ImagePath %>" style="height:300px" alt="<%#:Item.ProductName %>"/>
                 </div>
                 <div class="col-sm-8">
+                    <br />
+                    
     	            <b>Description:</b><br /><%#:Item.Description %>
 		            <br />
                     <br />

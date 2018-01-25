@@ -49,3 +49,6 @@ E:\BrainDigit\RGN\RGN\bin\Microsoft.Owin.Security.OAuth.xml
 E:\BrainDigit\RGN\RGN\obj\Debug\RGN.dll
 E:\BrainDigit\RGN\RGN\obj\Debug\RGN.pdb
 E:\BrainDigit\RGN\RGN\obj\Debug\RGN.csprojResolveAssemblyReference.cache
+E:\BrainDigit\RGN\RGN\obj\Debug\RGN.Migrations.InitialCreate.resources
+E:\BrainDigit\RGN\RGN\obj\Debug\RGN.csproj.GenerateResource.Cache
+E:\BrainDigit\RGN\RGN\obj\Debug\RGN.Migrations.initial.resources

@@ -20,17 +20,21 @@ namespace RGN.Models
                 new Category
                 {
                     CategoryID = 1,
-                    CategoryName = "Helmets"
+                    CategoryName = "Helmets",
+                    Description = "Helmets; To save your head."
                 },
                 new Category
                 {
                     CategoryID = 2,
-                    CategoryName = "Gloves"
+                    CategoryName = "Gloves",
+                    Description = "Gloves; To save your hand."
+
                 },
                 new Category
                 {
                     CategoryID = 3,
-                    CategoryName = "Apparels"
+                    CategoryName = "Apparels",
+                    Description = "Apparels; They looks cool plus they save you."
                 },
             };
             return categories;
