@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="Category Admin" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminCategory.aspx.cs" Inherits="RGN.Admin.AdminCategory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <br />
+    <br />
     <div class="container">
         <br />
         <h1>Category Administration</h1>

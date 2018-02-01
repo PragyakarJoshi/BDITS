@@ -1,12 +1,19 @@
 ﻿<%@ Page Title="Add New Product" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddNewProduct.aspx.cs" Inherits="RGN.Admin.AddNewProduct" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <br />
+    <br />
     <div class="container">
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <div class="row">
         <div class="col-sm-4 col-sm-offset-4 add-box">
         <p class=" h3 text-center">Add New Product</p>
         <br />
+           
         <table>
             <tr>
                 <td><asp:Label ID="LabelAddCategory" runat="server">Category:</asp:Label></td>

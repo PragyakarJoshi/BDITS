@@ -81,7 +81,7 @@ namespace RGN
         {
             using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
             {
-                string cartStr = string.Format("Cart ({0})", usersShoppingCart.GetCount());
+                string cartStr = string.Format("Your Cart ({0})", usersShoppingCart.GetCount());
                 cartCount.InnerText = cartStr;
             }
         }

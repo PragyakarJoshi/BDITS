@@ -1,14 +1,15 @@
-﻿<%@ Page Title="Rider Gears Nepal" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="RGN._Default" %>
+﻿<%@ Page Title="Rider Gears" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="RGN._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
     <div class="landing">
+        <br />
         <div class="container">
-            <h1><%: Title %></h1>
-            <h3>We have all your riding needs covered</h3>
+            <%--<img src="/Catalog/logo.png" alt="Alternate Text" height="175"/>--%>
+            <h1 class="custom-font animated fadeIn"><%: Title %></h1>
+            <h3 class="animated fadeIn">All your riding needs covered</h3>
             <br />
             <br />
-            <a href="#start" class="btn btn-primary">Start Browsing</a>
+            <a href="#start" class="btn btn-primary animated fadeIn"><span class="glyphicon glyphicon-search"></span> &nbsp;&nbsp;&nbsp; Start Browsing </a>
         </div>
    </div>
     <br />
@@ -33,6 +34,7 @@
            <div class="col-md-3">
                <div class="categoryBox">
                    <h2 class="text-center">Gloves</h2>
+                   
                     <p class="text-center">
                         Lorem ipsum dolor, consectetur adipisicing elitdo eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -46,7 +48,9 @@
            
            <div class="col-md-3">
                <div class="categoryBox">
+                   
                    <h2 class="text-center">Apparels</h2>
+                   
                     <p class="text-center">
                         Lorem ipsum dolor, consectetur adipisicing elitdo eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
@@ -59,7 +63,9 @@
            </div>
            <div class="col-md-3">
                <div class="categoryBox">
+                   
                    <h2 class="text-center">Shoes</h2>
+                  
                     <p class="text-center">
                         Lorem ipsum dolor, consectetur adipisicing elitdo eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
@@ -72,8 +78,6 @@
            </div>
        </div>
     </div>
-    <script>
-        
-    </script>
+    <script src="/Scripts/main.js" type="text/javascript"></script>
 </asp:Content>
 

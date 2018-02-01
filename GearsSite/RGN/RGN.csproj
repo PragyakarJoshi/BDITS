@@ -172,7 +172,9 @@
     <Content Include="Catalog\Images\bg.jpg" />
     <Content Include="Catalog\Images\gloves.jpg" />
     <Content Include="Catalog\Images\helmet.jpg" />
+    <Content Include="Catalog\logo.png" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\main.css" />
@@ -214,6 +216,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />

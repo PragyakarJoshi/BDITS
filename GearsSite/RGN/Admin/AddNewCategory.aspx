@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="Add Category" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddNewCategory.aspx.cs" Inherits="RGN.Admin.AddNewCategory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <br />
+    <br />
     <div class="container">
         <br />
         <h3>Add New Category</h3>

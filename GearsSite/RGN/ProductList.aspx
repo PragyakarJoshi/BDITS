@@ -1,10 +1,12 @@
 ﻿<%@ Page Title="Products" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ProductList.aspx.cs" Inherits="RGN.ProductList" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
+       <br />
+    <br />
     <section>
         
        <br />
-            
+        <br />  
        <h2 class="text-center" id="title"><%: Page.Title %></h2>
        <br />
         <div>

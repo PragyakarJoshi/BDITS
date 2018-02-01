@@ -14,7 +14,8 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="~/Content/main.css" rel="stylesheet" type="text/css" />
-
+    <link href="~/Content/animate.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">    
 </head>
 <body>
     <form runat="server">
@@ -26,6 +27,7 @@
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Name="respond" />
+                
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
                 <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
@@ -51,8 +53,8 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" id="adminLink" visible="false"  href="~/Admin/AdminPage">Admin</a></li>
                         <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" id="adminLink" visible="false"  href="~/Admin/AdminPage">Admin</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
                         <li><a runat="server" href="~/ProductList">Products</a></li>
@@ -95,5 +97,6 @@
         </footer>
       </div>
     </form>
+    
 </body>
 </html>
