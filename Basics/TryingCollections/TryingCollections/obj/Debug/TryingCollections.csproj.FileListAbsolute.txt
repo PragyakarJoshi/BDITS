@@ -1,0 +1,12 @@
+D:\Year 3\Application Development\Coursework\TryingCollections\TryingCollections\bin\Debug\TryingCollections.exe.config
+D:\Year 3\Application Development\Coursework\TryingCollections\TryingCollections\obj\Debug\TryingCollections.csprojResolveAssemblyReference.cache
+D:\Year 3\Application Development\Coursework\TryingCollections\TryingCollections\bin\Debug\TryingCollections.exe
+D:\Year 3\Application Development\Coursework\TryingCollections\TryingCollections\bin\Debug\TryingCollections.pdb
+D:\Year 3\Application Development\Coursework\TryingCollections\TryingCollections\obj\Debug\TryingCollections.exe
+D:\Year 3\Application Development\Coursework\TryingCollections\TryingCollections\obj\Debug\TryingCollections.pdb
+D:\Year 3\Application Development\BrainDigit\TryingCollections\TryingCollections\bin\Debug\TryingCollections.exe.config
+D:\Year 3\Application Development\BrainDigit\TryingCollections\TryingCollections\obj\Debug\TryingCollections.exe
+D:\Year 3\Application Development\BrainDigit\TryingCollections\TryingCollections\obj\Debug\TryingCollections.pdb
+D:\Year 3\Application Development\BrainDigit\TryingCollections\TryingCollections\bin\Debug\TryingCollections.exe
+D:\Year 3\Application Development\BrainDigit\TryingCollections\TryingCollections\bin\Debug\TryingCollections.pdb
+D:\Year 3\Application Development\BrainDigit\TryingCollections\TryingCollections\obj\Debug\TryingCollections.csprojResolveAssemblyReference.cache

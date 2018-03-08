@@ -1,0 +1,6 @@
+D:\Year 3\Application Development\BrainDigit\TryingInheritance\TryingInheritance\bin\Debug\TryingInheritance.exe.config
+D:\Year 3\Application Development\BrainDigit\TryingInheritance\TryingInheritance\bin\Debug\TryingInheritance.exe
+D:\Year 3\Application Development\BrainDigit\TryingInheritance\TryingInheritance\bin\Debug\TryingInheritance.pdb
+D:\Year 3\Application Development\BrainDigit\TryingInheritance\TryingInheritance\obj\Debug\TryingInheritance.csprojResolveAssemblyReference.cache
+D:\Year 3\Application Development\BrainDigit\TryingInheritance\TryingInheritance\obj\Debug\TryingInheritance.exe
+D:\Year 3\Application Development\BrainDigit\TryingInheritance\TryingInheritance\obj\Debug\TryingInheritance.pdb

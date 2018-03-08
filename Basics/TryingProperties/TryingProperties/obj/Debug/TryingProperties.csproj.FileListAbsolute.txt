@@ -1,0 +1,6 @@
+D:\Year 3\Application Development\BrainDigit\TryingProperties\TryingProperties\bin\Debug\TryingProperties.exe.config
+D:\Year 3\Application Development\BrainDigit\TryingProperties\TryingProperties\bin\Debug\TryingProperties.exe
+D:\Year 3\Application Development\BrainDigit\TryingProperties\TryingProperties\bin\Debug\TryingProperties.pdb
+D:\Year 3\Application Development\BrainDigit\TryingProperties\TryingProperties\obj\Debug\TryingProperties.csprojResolveAssemblyReference.cache
+D:\Year 3\Application Development\BrainDigit\TryingProperties\TryingProperties\obj\Debug\TryingProperties.exe
+D:\Year 3\Application Development\BrainDigit\TryingProperties\TryingProperties\obj\Debug\TryingProperties.pdb
