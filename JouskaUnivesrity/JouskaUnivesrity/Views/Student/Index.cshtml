@@ -5,54 +5,55 @@
 @{
     ViewBag.Title = "Students";
 }
-
-<h2>Students</h2>
-
-<p>
-    @Html.ActionLink("Add New Student", "Create")
-</p>
-@using (Html.BeginForm("Index", "Student", FormMethod.Get))
-{
-    <p>
-        <div class="form-group">
-            @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control pull-right", placeholder = "Search a Student..." })
-            <br /><br />
-        </div>
-        
+<div class="container">
+    <br /><br /><br />
+    <h2 class="pull-left">Students</h2>
+    <br />
+    <p class="pull-right btn btn-default">
+        @Html.ActionLink("Add New Student", "Create")
     </p>
-}
-<table class="table table-hover">
-    <tr>
-        <th>
-            @Html.ActionLink("Student Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
-        </th>
-        <th>
-            @Html.ActionLink("Enrollment Date", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
-        </th>
-        <th></th>
-    </tr>
-
-    @foreach (var item in Model)
+    <br /><br />
+    @using (Html.BeginForm("Index", "Student", FormMethod.Get))
     {
-        <tr>
-            <td>
-               @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName) 
-            </td>
- 
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })
-                @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-success btn-sm" }) 
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-danger btn-sm" })
-            </td>
-        </tr>
-    }
-        
-</table>
-<br />
-Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        <p>
+            <div class="form-group">
+                @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control pull-right", placeholder = "Search a Student..." })
+                <br /><br />
+            </div>
 
-@Html.PagedListPager(Model, page => Url.Action("Index",
-    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </p>
+    }
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.ActionLink("Student Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.ActionLink("Enrollment Date", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-success btn-sm" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "btn btn-danger btn-sm" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>

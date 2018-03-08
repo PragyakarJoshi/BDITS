@@ -3,26 +3,30 @@
 @{
     ViewBag.Title = "Statistics";
 }
-<h2>Student Statistics</h2>
-<table>
-    <tr>
-        <th>
-            Enrollment Date
-        </th>
-        <th>
-            Students
-        </th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
+<div class="container">
+    <br /><br /><br />
+    <h3>Student Enrollment Statistics</h3>
+    <br />
+    <table class="table table-striped">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
-            </td>
-            <td>
-                @item.StudentCount
-            </td>
+            <th>
+                Enrollment Date
+            </th>
+            <th>
+                Students Enrolled
+            </th>
         </tr>
-    }
-</table>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                </td>
+                <td>
+                    @item.StudentCount
+                </td>
+            </tr>
+        }
+    </table>
+</div>
