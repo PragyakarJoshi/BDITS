@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SunBeamEnterprises.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%: Page.Title %> - SunBeam Enterprises</title>
+
+    <link runat="server" href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link runat="server" href="~/assets/css/style.css" rel="stylesheet" />
+    <link runat="server" href="~/assets/css/slider.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+      <img runat="server" src="~/assets/logo.png" alt="" class="img-brand center-block" />
+      <a runat="server" href="~/Projects.aspx"><img runat="server" src="~/assets/project.png" alt="" class="img-nav"/>Projects</a>
+      <a runat="server" href="~/Employees.aspx"><img runat="server" src="~/assets/employee.png" alt="" class="img-nav"/>Employees</a>
+      <a runat="server" href="~/Divisions.aspx"><img runat="server" src="~/assets/department.png" alt="" class="img-nav"/>Divisions</a>
+      <a runat="server" href="~/Dependents.aspx"><img runat="server" src="~/assets/dependent.png" alt="" class="img-nav"/>Dependents</a>
+      <a runat="server" href="~/Skills.aspx"><img runat="server" src="~/assets/skill.png" alt="" class="img-nav"/>Skills</a>
+      <a runat="server" href="~/Tasks.aspx"><img runat="server" src="~/assets/task.png" alt="" class="img-nav"/>Tasks</a>
+       
+    </div>
+    <div class="content">
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+   
+    <script src="assets/js/jquery.min.js" ></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

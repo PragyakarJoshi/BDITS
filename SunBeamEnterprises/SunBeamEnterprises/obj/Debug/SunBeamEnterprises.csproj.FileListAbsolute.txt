@@ -1,0 +1,6 @@
+D:\Year 3\Application Development\Tutorials\SunBeamEnterprises\SunBeamEnterprises\bin\SunBeamEnterprises.dll.config
+D:\Year 3\Application Development\Tutorials\SunBeamEnterprises\SunBeamEnterprises\bin\SunBeamEnterprises.dll
+D:\Year 3\Application Development\Tutorials\SunBeamEnterprises\SunBeamEnterprises\bin\SunBeamEnterprises.pdb
+D:\Year 3\Application Development\Tutorials\SunBeamEnterprises\SunBeamEnterprises\obj\Debug\SunBeamEnterprises.dll
+D:\Year 3\Application Development\Tutorials\SunBeamEnterprises\SunBeamEnterprises\obj\Debug\SunBeamEnterprises.pdb
+D:\Year 3\Application Development\Tutorials\SunBeamEnterprises\SunBeamEnterprises\obj\Debug\SunBeamEnterprises.csprojResolveAssemblyReference.cache

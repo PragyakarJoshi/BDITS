@@ -1,0 +1,115 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Crete+Round');
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+.landing {
+    background-image: url('../bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.img-logo {
+    height:100px;
+}
+.box {
+    padding: 35px 60px 15px 60px;  
+    margin: 10px;
+    margin-top: 30px;
+    background-color: rgba(23, 49, 82,0.7);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    max-width: 250px;
+}
+.box:hover {
+    background-color: rgb(23, 49, 82);
+    transition: all 0.4s ease;
+}
+.img-icon {
+    height: 90px;
+    margin-bottom:30px;
+}
+.page-selection-title {
+    color: #ffffff;
+    font-family: 'Crete Round', serif;
+    font-size:22px;
+}
+.img-brand {
+    height: 35px;
+    margin-bottom: 25px;
+}
+img-brand::after{
+    content: ' ';
+    border-bottom: 2px;
+    background-color:#fff;
+    width: 100%;
+    border-bottom-color: #fff;
+}
+.sidenav {
+    height:100%;
+    width: 250px;
+    position:fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgb(23, 49, 82), #0e2036);
+    overflow-x: hidden;
+    padding-top: 30px;
+    transition: 0.5s ease;
+    box-shadow: 5px 0px 30px #d2d2d2;
+}
+.sidenav a {
+    padding: 8px 8px 8px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.sidenav a:hover {
+    background-color: #808080;
+}
+.sidenav a.active, .sidenav a:hover   {
+    background-color: #ec8c40;
+}
+
+.img-nav {
+    height: 25px;
+    margin-right: 25px;
+}
+.content{
+    padding-left: 250px;
+    min-height: 100vh;
+}
+.page-title {
+    font-family: 'Crete Round', serif;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+.table,
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+.btn-add {
+    letter-spacing: 1px;
+    border: 0;
+    transition: 0.3s ease;
+}
+.btn-add:hover {
+    background-color: rgb(23, 49, 82);
+
+}
