@@ -47,15 +47,42 @@
                     <asp:BoundField DataField="PROJECT_CLIENT" HeaderText="Client" SortExpression="PROJECT_CLIENT" />
                     <asp:BoundField DataField="DIVISION_ID" HeaderText="Division" SortExpression="DIVISION_ID" />
                     <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
-                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
+                    <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-warning btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
                 </Columns>
             </asp:GridView>
+        
         </div>
     <div id="olay" class="overlay"> 
   	    <div class="overlay-content">
     	    <h3 class="overlay-title">Add New Project</h3>
-
-            <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+              <br />
+            <asp:FormView ID="FormView1" runat="server" DataKeyNames="PROJECT_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+            <InsertItemTemplate>
+                
+                <asp:TextBox ID="PROJECT_IDTextBox" runat="server" Text='<%# Bind("PROJECT_ID") %>' class="form-control" placeholder="Project ID"/>
+                <br />
+                
+                <asp:TextBox ID="PROJECT_NAMETextBox" runat="server" Text='<%# Bind("PROJECT_NAME") %>' class="form-control" placeholder="Project Name" />
+                <br />
+                
+                <asp:TextBox ID="PROJECT_STATUSTextBox" runat="server" Text='<%# Bind("PROJECT_STATUS") %>' class="form-control" placeholder="Project Status"/>
+                <br />
+                
+                <asp:TextBox ID="PROJECT_START_DATETextBox" runat="server" Text='<%# Bind("PROJECT_START_DATE") %>' class="form-control" placeholder="Start Date"/>
+                <br />
+                
+                <asp:TextBox ID="PROJECT_END_DATETextBox" runat="server" Text='<%# Bind("PROJECT_END_DATE") %>' class="form-control" placeholder="End Date"/>
+                <br />
+                
+                <asp:TextBox ID="PROJECT_CLIENTTextBox" runat="server" Text='<%# Bind("PROJECT_CLIENT") %>' class="form-control" placeholder="Client Name"/>
+                <br />
+                
+                <asp:TextBox ID="DIVISION_IDTextBox" runat="server" Text='<%# Bind("DIVISION_ID") %>' class="form-control" placeholder="Division"/>
+                <br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert &nbsp; <span class='glyphicon glyphicon-ok'></span>" CssClass="btn btn-info btn-form"/>   
+                 <a href="javascript:void(0)" class="btn btn-warning btn-form" onclick="closeNav()">Cancel &nbsp; <span class='glyphicon glyphicon-remove'></span> </a>  
+            </InsertItemTemplate>
+        </asp:FormView>
 	    </div>
     </div>
 </asp:Content>

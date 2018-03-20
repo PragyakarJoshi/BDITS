@@ -39,26 +39,51 @@
                     <asp:Parameter Name="EMP_ID" Type="Decimal" />
                 </UpdateParameters>
             </asp:SqlDataSource>
-            <asp:GridView ID="EmployeeGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="EMP_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped table-condensed" AllowSorting="True" BorderColor="White" BorderStyle="Dotted" AllowPaging="True" PageSize="15">
+            <asp:GridView ID="EmployeeGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="EMP_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped table-condensed" AllowSorting="True" BorderColor="White" BorderStyle="Dotted" AllowPaging="True" PageSize="13">
                 <Columns>
                     <asp:BoundField DataField="EMP_ID" HeaderText="ID" ReadOnly="True" SortExpression="EMP_ID" />
                     <asp:BoundField DataField="EMP_FNAME" HeaderText="First Name" SortExpression="EMP_FNAME" />
                     <asp:BoundField DataField="EMP_LNAME" HeaderText="Last Name" SortExpression="EMP_LNAME" />
                     <asp:BoundField DataField="EMP_EMAIL" HeaderText="Email" SortExpression="EMP_EMAIL" />
                     <asp:BoundField DataField="EMP_CONTACT" HeaderText="Contact Number" SortExpression="EMP_CONTACT" />
-                    <asp:BoundField DataField="EMP_DOB" HeaderText="Date-Of-Birth" SortExpression="EMP_DOB" DataFormatString="{0:d}"/>
+                    <asp:BoundField DataField="EMP_DOB" HeaderText="DOB" SortExpression="EMP_DOB" DataFormatString="{0:d}"/>
                     <asp:BoundField DataField="EMP_ADDRESS" HeaderText="Address" SortExpression="EMP_ADDRESS" />
                     <asp:BoundField DataField="DIVISION_ID" HeaderText="Division" SortExpression="DIVISION_ID" />
                     <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
-                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
+                    <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-warning btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
                 </Columns>
                 <PagerSettings Mode="NextPrevious" NextPageImageUrl="~/assets/icons8-right-26.png" NextPageText="Next  &gt;" PreviousPageImageUrl="~/assets/icons8-long-arrow-left-26.png" PreviousPageText="&lt; Previous" />
             </asp:GridView>
-        </div>
+        <br />   
+    </div>
     <div id="olay" class="overlay"> 
   	    <div class="overlay-content">
     	    <h3 class="overlay-title">Add New Employee</h3>
-               <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+              <br />    
+               <asp:FormView ID="FormView1" runat="server" DataKeyNames="EMP_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+                    <InsertItemTemplate>
+                        <div class="form-group">
+                        <asp:TextBox ID="EMP_IDTextBox" runat="server" Text='<%# Bind("EMP_ID") %>' class="form-control custom-control" placeholder="Employee ID"/>
+                        <br />
+                        <asp:TextBox ID="EMP_FNAMETextBox" runat="server" Text='<%# Bind("EMP_FNAME") %>' class="form-control" placeholder="First Name"/>
+                        <br />
+                        <asp:TextBox ID="EMP_LNAMETextBox" runat="server" Text='<%# Bind("EMP_LNAME") %>' class="form-control" placeholder="Last Name"/>
+                        <br />
+                        <asp:TextBox ID="EMP_EMAILTextBox" runat="server" Text='<%# Bind("EMP_EMAIL") %>' class="form-control" placeholder="Email"/>
+                        <br />
+                        <asp:TextBox ID="EMP_CONTACTTextBox" runat="server" Text='<%# Bind("EMP_CONTACT") %>' class="form-control" placeholder="Contact Number"/>
+                        <br />
+                        <asp:TextBox ID="EMP_DOBTextBox" runat="server" Text='<%# Bind("EMP_DOB") %>' class="form-control" placeholder="Date of Birth" />
+                        <br />
+                        <asp:TextBox ID="EMP_ADDRESSTextBox" runat="server" Text='<%# Bind("EMP_ADDRESS") %>' class="form-control" placeholder="Address"/>
+                        <br />
+                        <asp:TextBox ID="DIVISION_IDTextBox" runat="server" Text='<%# Bind("DIVISION_ID") %>' class="form-control" placeholder="Division"/>
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert &nbsp; <span class='glyphicon glyphicon-ok'></span>" CssClass="btn btn-info btn-form"/>   
+                        <a href="javascript:void(0)" class="btn btn-warning btn-form" onclick="closeNav()">Cancel &nbsp; <span class='glyphicon glyphicon-remove'></span> </a>  
+                        </div>
+                    </InsertItemTemplate>
+                </asp:FormView>
 	    </div>
     </div>
 </asp:Content>

@@ -30,17 +30,29 @@
 
         <asp:GridView ID="SkillGridView" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="SKILL_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped table-condensed">
             <Columns>
+                
                 <asp:BoundField DataField="SKILL_ID" HeaderText="Skill ID" ReadOnly="True" SortExpression="SKILL_ID" />
                 <asp:BoundField DataField="SKILL_NAME" HeaderText="Skill" SortExpression="SKILL_NAME" />
                 <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
-                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
+                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-warning btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
             </Columns>
         </asp:GridView>
+        
     </div>
     <div id="olay" class="overlay"> 
   	    <div class="overlay-content">
     	    <h3 class="overlay-title">Add New Skill</h3>
-               <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+              <asp:FormView ID="FormView1" runat="server" DataKeyNames="SKILL_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+            <InsertItemTemplate>
+                <asp:TextBox ID="SKILL_IDTextBox" runat="server" Text='<%# Bind("SKILL_ID") %>' class="form-control" placeholder="Skill ID"/>
+                <br />
+                <asp:TextBox ID="SKILL_NAMETextBox" runat="server" Text='<%# Bind("SKILL_NAME") %>' class="form-control" placeholder="Skill Name"/>
+                <br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert &nbsp; <span class='glyphicon glyphicon-ok'></span>" class="btn btn-info btn-form"/>
+               <a href="javascript:void(0)" class="btn btn-warning btn-form" onclick="closeNav()">Cancel &nbsp; <span class='glyphicon glyphicon-remove'></span> </a>
+            </InsertItemTemplate>            
+        </asp:FormView>
+               
 	    </div>
     </div>
 </asp:Content>

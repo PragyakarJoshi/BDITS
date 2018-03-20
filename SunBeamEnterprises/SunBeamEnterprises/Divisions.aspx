@@ -33,19 +33,35 @@
         </asp:SqlDataSource>
         <asp:GridView ID="DivisionGridView" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="DIVISION_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped table-condensed">
             <Columns>
-                <asp:BoundField DataField="DIVISION_ID" HeaderText="Division ID" ReadOnly="True" SortExpression="DIVISION_ID" />
+                <asp:BoundField DataField="DIVISION_ID" HeaderText="ID" ReadOnly="True" SortExpression="DIVISION_ID" />
                 <asp:BoundField DataField="DIVISION_NAME" HeaderText="Division Name" SortExpression="DIVISION_NAME" />
                 <asp:BoundField DataField="DIVISION_CONTACT" HeaderText="Contact Number" SortExpression="DIVISION_CONTACT" />
-                <asp:BoundField DataField="MANAGER_ID" HeaderText="Division Manager" SortExpression="MANAGER_ID" />
+                <asp:BoundField DataField="MANAGER_ID" HeaderText="Manager" SortExpression="MANAGER_ID" />
                 <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
-                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
+                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-warning btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
             </Columns>
         </asp:GridView>
+        
         </div>
     <div id="olay" class="overlay"> 
   	    <div class="overlay-content">
     	    <h3 class="overlay-title">Add New Division</h3>
-               <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+              <br />
+              <asp:FormView ID="FormView1" runat="server" DataKeyNames="DIVISION_ID" DataSourceID="SqlDataSource1" DefaultMode="Insert">
+            <InsertItemTemplate>
+                <asp:TextBox ID="DIVISION_IDTextBox" runat="server" Text='<%# Bind("DIVISION_ID") %>' class="form-control" placeholder="Division ID"/>
+                <br />
+                <asp:TextBox ID="DIVISION_NAMETextBox" runat="server" Text='<%# Bind("DIVISION_NAME") %>' class="form-control" placeholder="Division Name" />
+                <br />
+                <asp:TextBox ID="DIVISION_CONTACTTextBox" runat="server" Text='<%# Bind("DIVISION_CONTACT") %>' class="form-control" placeholder="Contact Number"/>
+                <br />
+                <asp:TextBox ID="MANAGER_IDTextBox" runat="server" Text='<%# Bind("MANAGER_ID") %>' class="form-control" placeholder="Manager"/>
+                <br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert &nbsp; <span class='glyphicon glyphicon-ok'></span>" CssClass="btn btn-info btn-form"/>   
+                 <a href="javascript:void(0)" class="btn btn-warning btn-form" onclick="closeNav()">Cancel &nbsp; <span class='glyphicon glyphicon-remove'></span> </a>  
+            </InsertItemTemplate>
+        </asp:FormView>
+               
 	    </div>
     </div>
     

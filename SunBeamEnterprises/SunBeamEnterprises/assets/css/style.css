@@ -73,6 +73,7 @@ img-brand::after{
     margin-right: 20px;
     margin-top: 5px;
     border-radius: 5px;
+    
 }
 .sidenav a.active, .sidenav a:hover   {
     background:  #ec8c40;
@@ -102,7 +103,7 @@ img-brand::after{
     border: none;
 }
 .btn-add {
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     border: 0;
     transition: 0.3s ease;
 }
@@ -138,4 +139,10 @@ img-brand::after{
     text-transform:uppercase;
     letter-spacing: 1px;
 }
+.form-control {
+    width: 300px;   
+}
 
+.btn-form {
+    width: 147px;
+}
