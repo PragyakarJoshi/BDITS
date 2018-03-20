@@ -10,7 +10,7 @@
                 <p class="page-title"><%: Page.Title %></p>
             </div>
             <div class="col-md-6">
-                <a runat="server" href="" class="btn btn-primary pull-right btn-add">New Employee &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
+                <a runat="server" onclick="openNav()" class="btn btn-primary pull-right btn-add">New Employee &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
             </div>
         </div>
         <br />
@@ -39,17 +39,26 @@
                     <asp:Parameter Name="EMP_ID" Type="Decimal" />
                 </UpdateParameters>
             </asp:SqlDataSource>
-            <asp:GridView ID="EmployeeGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="EMP_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped" AllowSorting="True" BorderColor="White" BorderStyle="Dotted">
+            <asp:GridView ID="EmployeeGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="EMP_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped table-condensed" AllowSorting="True" BorderColor="White" BorderStyle="Dotted" AllowPaging="True" PageSize="15">
                 <Columns>
-                    <asp:BoundField DataField="EMP_ID" HeaderText="Employee ID" ReadOnly="True" SortExpression="EMP_ID" />
+                    <asp:BoundField DataField="EMP_ID" HeaderText="ID" ReadOnly="True" SortExpression="EMP_ID" />
                     <asp:BoundField DataField="EMP_FNAME" HeaderText="First Name" SortExpression="EMP_FNAME" />
                     <asp:BoundField DataField="EMP_LNAME" HeaderText="Last Name" SortExpression="EMP_LNAME" />
                     <asp:BoundField DataField="EMP_EMAIL" HeaderText="Email" SortExpression="EMP_EMAIL" />
                     <asp:BoundField DataField="EMP_CONTACT" HeaderText="Contact Number" SortExpression="EMP_CONTACT" />
-                    <asp:BoundField DataField="EMP_DOB" HeaderText="Date-Of-Birth" SortExpression="EMP_DOB" />
+                    <asp:BoundField DataField="EMP_DOB" HeaderText="Date-Of-Birth" SortExpression="EMP_DOB" DataFormatString="{0:d}"/>
                     <asp:BoundField DataField="EMP_ADDRESS" HeaderText="Address" SortExpression="EMP_ADDRESS" />
                     <asp:BoundField DataField="DIVISION_ID" HeaderText="Division" SortExpression="DIVISION_ID" />
+                    <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
+                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
                 </Columns>
+                <PagerSettings Mode="NextPrevious" NextPageImageUrl="~/assets/icons8-right-26.png" NextPageText="Next  &gt;" PreviousPageImageUrl="~/assets/icons8-long-arrow-left-26.png" PreviousPageText="&lt; Previous" />
             </asp:GridView>
         </div>
+    <div id="olay" class="overlay"> 
+  	    <div class="overlay-content">
+    	    <h3 class="overlay-title">Add New Employee</h3>
+               <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+	    </div>
+    </div>
 </asp:Content>

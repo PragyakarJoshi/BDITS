@@ -60,7 +60,6 @@ img-brand::after{
     overflow-x: hidden;
     padding-top: 30px;
     transition: 0.5s ease;
-    box-shadow: 5px 0px 30px #d2d2d2;
 }
 .sidenav a {
     padding: 8px 8px 8px 15px;
@@ -75,11 +74,8 @@ img-brand::after{
     margin-top: 5px;
     border-radius: 5px;
 }
-.sidenav a:hover {
-    background-color: #808080;
-}
 .sidenav a.active, .sidenav a:hover   {
-    background-color: #ec8c40;
+    background:  #ec8c40;
 }
 
 .img-nav {
@@ -89,6 +85,7 @@ img-brand::after{
 .content{
     padding-left: 250px;
     min-height: 100vh;
+    
 }
 .page-title {
     font-family: 'Crete Round', serif;
@@ -113,3 +110,32 @@ img-brand::after{
     background-color: rgb(23, 49, 82);
 
 }
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    padding-left: 250px;
+    background-color: rgba(255,255,255, 0.9); 
+    overflow-x: hidden; 
+    overflow-y:hidden;
+    transition: 0.5s;   
+
+}
+
+.overlay-content {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+}
+.overlay-title {
+    font-family: 'Crete Round', serif;
+    text-transform:uppercase;
+    letter-spacing: 1px;
+}
+

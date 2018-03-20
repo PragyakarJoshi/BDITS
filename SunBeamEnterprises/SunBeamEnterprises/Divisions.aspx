@@ -10,7 +10,7 @@
                 <p class="page-title"><%: Page.Title %></p>
             </div>
             <div class="col-md-6">
-                <a runat="server" href="" class="btn btn-primary pull-right btn-add">New Division &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
+                <a runat="server" onclick="openNav()" class="btn btn-primary pull-right btn-add">New Division &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
             </div>
         </div>
         <br />
@@ -31,14 +31,23 @@
                 <asp:Parameter Name="DIVISION_ID" Type="Decimal" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="DivisionGridView" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="DIVISION_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped ">
+        <asp:GridView ID="DivisionGridView" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="DIVISION_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped table-condensed">
             <Columns>
                 <asp:BoundField DataField="DIVISION_ID" HeaderText="Division ID" ReadOnly="True" SortExpression="DIVISION_ID" />
                 <asp:BoundField DataField="DIVISION_NAME" HeaderText="Division Name" SortExpression="DIVISION_NAME" />
                 <asp:BoundField DataField="DIVISION_CONTACT" HeaderText="Contact Number" SortExpression="DIVISION_CONTACT" />
                 <asp:BoundField DataField="MANAGER_ID" HeaderText="Division Manager" SortExpression="MANAGER_ID" />
+                <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
+                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
             </Columns>
         </asp:GridView>
         </div>
-    
+    <div id="olay" class="overlay"> 
+  	    <div class="overlay-content">
+    	    <h3 class="overlay-title">Add New Division</h3>
+               <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+	    </div>
+    </div>
+    
+
 </asp:Content>

@@ -10,7 +10,7 @@
                 <p class="page-title"><%: Page.Title %></p>
             </div>
             <div class="col-md-6">
-                <a runat="server" href="" class="btn btn-primary pull-right btn-add">New Projects &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
+                <a runat="server" onclick="openNav()" class="btn btn-primary pull-right btn-add">New Project &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
             </div>
         </div>
         <br />
@@ -22,7 +22,7 @@
                     <asp:Parameter Name="PROJECT_ID" Type="Decimal" />
                     <asp:Parameter Name="PROJECT_NAME" Type="String" />
                     <asp:Parameter Name="PROJECT_STATUS" Type="String" />
-                    <asp:Parameter Name="PROJECT_START_DATE" Type="DateTime" />
+                    <asp:Parameter Name="PROJECT_START_DATE" Type="DateTime"  />
                     <asp:Parameter Name="PROJECT_END_DATE" Type="DateTime" />
                     <asp:Parameter Name="PROJECT_CLIENT" Type="String" />
                     <asp:Parameter Name="DIVISION_ID" Type="Decimal" />
@@ -37,16 +37,25 @@
                     <asp:Parameter Name="PROJECT_ID" Type="Decimal" />
                 </UpdateParameters>
         </asp:SqlDataSource>
-            <asp:GridView ID="ProjectGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="PROJECT_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped " AllowSorting="True"  >
+            <asp:GridView ID="ProjectGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="PROJECT_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped table-condensed" AllowSorting="True"  >
                 <Columns>
-                    <asp:BoundField DataField="PROJECT_ID" HeaderText="Project ID" ReadOnly="True" SortExpression="PROJECT_ID" />
+                    <asp:BoundField DataField="PROJECT_ID" HeaderText="ID" ReadOnly="true" SortExpression="PROJECT_ID" />
                     <asp:BoundField DataField="PROJECT_NAME" HeaderText="Project Name" SortExpression="PROJECT_NAME" />
                     <asp:BoundField DataField="PROJECT_STATUS" HeaderText="Status" SortExpression="PROJECT_STATUS" />
-                    <asp:BoundField DataField="PROJECT_START_DATE" HeaderText="Start Date" SortExpression="PROJECT_START_DATE" />
-                    <asp:BoundField DataField="PROJECT_END_DATE" HeaderText="End Date" SortExpression="PROJECT_END_DATE" />
+                    <asp:BoundField DataField="PROJECT_START_DATE" HeaderText="Start Date" SortExpression="PROJECT_START_DATE" DataFormatString="{0:d}"/>
+                    <asp:BoundField DataField="PROJECT_END_DATE" HeaderText="End Date" SortExpression="PROJECT_END_DATE" DataFormatString="{0:d}"/>
                     <asp:BoundField DataField="PROJECT_CLIENT" HeaderText="Client" SortExpression="PROJECT_CLIENT" />
                     <asp:BoundField DataField="DIVISION_ID" HeaderText="Division" SortExpression="DIVISION_ID" />
+                    <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
+                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
                 </Columns>
             </asp:GridView>
         </div>
+    <div id="olay" class="overlay"> 
+  	    <div class="overlay-content">
+    	    <h3 class="overlay-title">Add New Project</h3>
+
+            <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+	    </div>
+    </div>
 </asp:Content>

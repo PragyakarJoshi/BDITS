@@ -10,7 +10,7 @@
                 <p class="page-title"><%: Page.Title %></p>
             </div>
             <div class="col-md-6">
-                <a runat="server" href="" class="btn btn-primary pull-right btn-add">New Dependent &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
+                <a onclick="openNav()" class="btn btn-primary pull-right btn-add">New Dependent &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
             </div>
         </div>
         <br />
@@ -29,12 +29,21 @@
                 <asp:Parameter Name="DEPENDENT_ID" Type="Decimal" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="DependentGridView" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="DEPENDENT_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped ">
+        <asp:GridView ID="DependentGridView" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="DEPENDENT_ID" DataSourceID="SqlDataSource1" CssClass="table table-striped table-borderless table-condensed" ShowHeaderWhenEmpty="True">
             <Columns>
                 <asp:BoundField DataField="DEPENDENT_ID" HeaderText="Dependent ID" ReadOnly="True" SortExpression="DEPENDENT_ID" />
                 <asp:BoundField DataField="DEPENDENT_FNAME" HeaderText="First Name" SortExpression="DEPENDENT_FNAME" />
                 <asp:BoundField DataField="DEPENDENT_LNAME" HeaderText="Last Name" SortExpression="DEPENDENT_LNAME" />
+                <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
+                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
             </Columns>
         </asp:GridView>
     </div>
+    <div id="olay" class="overlay"> 
+  	    <div class="overlay-content">
+    	    <h3 class="overlay-title">Add New Dependent</h3>
+               <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+	    </div>
+    </div>
+    
 </asp:Content>

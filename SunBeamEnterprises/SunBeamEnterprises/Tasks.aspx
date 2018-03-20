@@ -10,7 +10,7 @@
                 <p class="page-title"><%: Page.Title %></p>
             </div>
             <div class="col-md-6">
-                <a runat="server" href="" class="btn btn-primary pull-right btn-add">New Task &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
+                <a runat="server" onclick="openNav()" class="btn btn-primary pull-right btn-add">New Task &nbsp;&nbsp;<span class="glyphicon glyphicon-plus"></span> </a>
             </div>
         </div>
         <br />
@@ -27,11 +27,19 @@
                 <asp:Parameter Name="TASK_ID" Type="Decimal" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="TASK_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped " AllowSorting="True">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="TASK_ID" DataSourceID="SqlDataSource1" CssClass="table table-borderless table-striped table-condensed" AllowSorting="True">
             <Columns>
                 <asp:BoundField DataField="TASK_ID" HeaderText="Task ID" ReadOnly="True" SortExpression="TASK_ID" />
-                <asp:BoundField DataField="TASK_NAME" HeaderText="Task Name" SortExpression="TASK_NAME" />
+                <asp:BoundField DataField="TASK_NAME" HeaderText="Task" SortExpression="TASK_NAME" />
+                <asp:CommandField ShowEditButton="True"  ControlStyle-CssClass="btn btn-info btn-sm" EditText="Edit  &nbsp; <span class='glyphicon glyphicon-pencil'></span>"></asp:CommandField>
+                <asp:CommandField  ShowDeleteButton="True" ControlStyle-CssClass="btn btn-danger btn-sm" DeleteText="Remove &nbsp; <span class='glyphicon glyphicon-trash'></span>"></asp:CommandField>
             </Columns>
         </asp:GridView>
+    </div>
+    <div id="olay" class="overlay"> 
+  	    <div class="overlay-content">
+    	    <h3 class="overlay-title">Add New Task</h3>
+               <a href="javascript:void(0)" class="btn btn-default btn-back" onclick="closeNav()">DONE</a>
+	    </div>
     </div>
 </asp:Content>

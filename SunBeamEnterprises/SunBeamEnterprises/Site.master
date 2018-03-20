@@ -10,8 +10,7 @@
     <title><%: Page.Title %> - SunBeam Enterprises</title>
 
     <link runat="server" href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link runat="server" href="~/assets/css/style.css" rel="stylesheet" />
-    <link runat="server" href="~/assets/css/slider.css" rel="stylesheet" />
+    <link runat="server" href="~/assets/css/style.css" rel="stylesheet" />    
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
 </head>
 <body>
@@ -37,5 +36,7 @@
    
     <script src="assets/js/jquery.min.js" ></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
 </body>
 </html>

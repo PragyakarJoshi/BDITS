@@ -63,6 +63,9 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\icons8-long-arrow-left-26.png" />
+    <Content Include="assets\icons8-right-26.png" />
+    <Content Include="assets\js\script.js" />
     <Content Include="assets\skill.png" />
     <Content Include="assets\task.png" />
     <Content Include="Dependents.aspx" />
